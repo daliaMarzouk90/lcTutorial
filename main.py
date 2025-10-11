@@ -27,7 +27,7 @@ def main():
     )
     
     # llm = ChatOpenAI(model="gpt-5", temperature=0, openai_api_key=os.getenv("OPENAI_API_KEY"))
-    llm = ChatOllama(model="gemma3:270m", temperature=0, base_url="http://localhost:11434")
+    llm = ChatOllama(model="gemma3:270m", base_url="http://localhost:11434")
     chain = summary_prompt_template | llm
     
     response = chain.invoke(input={"information": information})
