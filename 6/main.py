@@ -54,9 +54,9 @@ if __name__ == '__main__':
     
     
     
-    llm = ChatOllama(model="qwen3:0.6b",
+    llm = ChatOllama(model="qwen2.5:3b",
                      base_url="http://localhost:11434", 
-                     reasoning=True, temperature=0, 
+                      temperature=0, 
                      stop=["\nObservation"],
                      callbacks=[AgentCallbackHandler()]) #we add the stop to avoid the LLM to hallucinate after the observation
 
